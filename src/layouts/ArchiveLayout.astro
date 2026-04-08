@@ -1,0 +1,38 @@
+---
+import '../styles/global.css';
+import { site } from '../data/site';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = site.meta.title, description = site.meta.description } = Astro.props;
+const canonical = new URL(Astro.url.pathname, site.url).href;
+---
+
+<!doctype html>
+<html lang="en" class="bg-navy text-slate-300">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" type="image/svg+xml" href="/fav.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+  </head>
+  <body class="min-h-screen antialiased selection:bg-accent/30 selection:text-accent">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="mx-auto max-w-6xl px-4 pb-16 pt-12 sm:px-6 md:px-8 xl:max-w-7xl">
+      <main id="main">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>

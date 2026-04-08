@@ -1,0 +1,96 @@
+---
+import type { FeaturedProject } from '../data/site';
+import { Image } from 'astro:assets';
+import osbMigration from '../assets/osb-migration.png';
+import integrationArch from '../assets/integration-architecture.png';
+import postVentaPortal from '../assets/post-venta-portal.png';
+
+interface Props {
+  project: FeaturedProject;
+}
+
+const { project } = Astro.props;
+
+const imageMap: Record<string, any> = {
+  'osb-migration.png': osbMigration,
+  'integration-architecture.png': integrationArch,
+  'post-venta-portal.png': postVentaPortal,
+};
+
+type ProjectWithTechCategories = FeaturedProject & {
+  techCategories?: {
+    category: string;
+    items: string[];
+  }[];
+};
+
+const projectWithCategories = project as ProjectWithTechCategories;
+---
+
+<article class="panel-card group space-y-6">
+  <header>
+    <h3 class="text-2xl font-semibold text-slate-lightest">
+      {project.title}
+    </h3>
+    {project.period && (
+      <p class="font-mono text-sm text-accent mt-1">{project.period}</p>
+    )}
+  </header>
+
+  {project.image && (
+    <div class="w-full">
+      {imageMap[project.image] ? (
+        <Image
+          src={imageMap[project.image]}
+          alt={project.imageAlt ?? ''}
+          class="w-full rounded border border-navy-lighter/80 bg-navy-light/20"
+          loading="lazy"
+        />
+      ) : (
+        <img
+          src={project.image}
+          alt={project.imageAlt ?? ''}
+          class="w-full rounded border border-navy-lighter/80 bg-navy-light/20"
+          loading="lazy"
+        />
+      )}
+    </div>
+  )}
+
+  <div class="space-y-4">
+    <p class="body-copy">{project.summary}</p>
+
+    {project.solution && (
+      <div>
+        <dt class="font-mono text-xs uppercase tracking-wider text-accent">Solution</dt>
+        <dd class="mt-1.5 text-slate">{project.solution}</dd>
+      </div>
+    )}
+    {project.impact && (
+      <div>
+        <dt class="font-mono text-xs uppercase tracking-wider text-accent">Impact</dt>
+        <dd class="mt-1.5 text-slate">{project.impact}</dd>
+      </div>
+    )}
+  </div>
+
+  <div>
+    <dt class="font-mono text-xs uppercase tracking-wider text-accent mb-3">Technologies / Tools</dt>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+      {projectWithCategories.techCategories.map((techCat) => (
+        <div>
+          <h4 class="font-mono text-xs uppercase tracking-wider text-slate-lightest mb-2">
+            {techCat.category}
+          </h4>
+          <ul class="space-y-1">
+            {techCat.items.map((item) => (
+              <li class="font-mono text-sm text-slate-light">
+                {item}
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</article>

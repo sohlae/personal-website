@@ -1,0 +1,68 @@
+---
+import { site } from '../data/site';
+
+type AboutParagraph = typeof site.about.paragraphs[number];
+
+function isStringParagraph(p: AboutParagraph): p is string {
+  return typeof p === 'string';
+}
+
+function hasBullets(p: AboutParagraph): p is { heading?: string; bullets: string[] } & (
+  | { text: string; link?: { text: string; href: string }; textAfter: string }
+  | Record<string, never>
+) {
+  return 'bullets' in p;
+}
+
+function hasTechItems(p: AboutParagraph): p is { heading?: string; techItems: string[] } & Record<string, never> {
+  return 'techItems' in p;
+}
+
+function hasText(p: AboutParagraph): p is { text: string; link?: { text: string; href: string }; textAfter: string } {
+  return 'text' in p;
+}
+---
+
+<section
+  id="about"
+  class="mb-24 scroll-mt-24 lg:mb-32 lg:scroll-mt-8"
+  aria-labelledby="about-heading"
+>
+  <h2 id="about-heading" class="section-heading">About</h2>
+  <div class="mt-8 grid items-start gap-10">
+    <div class="max-w-prose space-y-4 body-copy">
+      {site.about.paragraphs.map((p) => (
+        isStringParagraph(p) ? (
+          <p>{p}</p>
+        ) : (
+          <>
+            {hasText(p) && (
+              <p>
+                {p.text}
+                {p.link && (
+                  <a href={p.link.href} class="subtle-link underline" target="_blank" rel="noreferrer">
+                    {p.link.text}
+                  </a>
+                )}
+                {p.textAfter}
+              </p>
+            )}
+            {p.heading && <p class="font-semibold text-white-soft">{p.heading}</p>}
+            {hasBullets(p) && (
+              <ul class="list-disc pl-5 space-y-1">
+                {p.bullets.map((bullet) => (
+                  <li>{bullet}</li>
+                ))}
+              </ul>
+            )}
+            {hasTechItems(p) && (
+              <p class="font-mono text-sm text-accent">
+                {p.techItems.join(', ')}
+              </p>
+            )}
+          </>
+        )
+      ))}
+    </div>
+  </div>
+</section>

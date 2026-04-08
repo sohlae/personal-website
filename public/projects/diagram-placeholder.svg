@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="420" viewBox="0 0 800 420" fill="none" role="img" aria-hidden="true">
+  <rect width="800" height="420" rx="12" fill="#112240" stroke="#27474E" stroke-width="2"/>
+  <rect x="48" y="160" width="140" height="100" rx="8" fill="#0a192f" stroke="#3a5f68" stroke-width="1.5"/>
+  <rect x="240" y="120" width="320" height="180" rx="8" fill="#0a192f" stroke="#27474E" stroke-width="1.5"/>
+  <rect x="612" y="160" width="140" height="100" rx="8" fill="#0a192f" stroke="#3a5f68" stroke-width="1.5"/>
+  <path d="M188 210h44M568 210h44" stroke="#27474E" stroke-width="2" stroke-linecap="round"/>
+  <circle cx="400" cy="80" r="10" fill="#27474E"/>
+  <path d="M400 90v40M400 160v40" stroke="#27474E" stroke-width="2"/>
+  <text x="400" y="340" text-anchor="middle" fill="#94a3b8" font-family="ui-sans-serif, system-ui" font-size="16">Replace with project diagram</text>
+</svg>
