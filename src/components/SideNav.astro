@@ -20,7 +20,7 @@ import { Image } from 'astro:assets';
       </div>
 
       <div>
-        <a href="/" class="text-5xl font-bold tracking-tight text-white-soft transition hover:text-accent">
+        <a href={import.meta.env.BASE_URL} class="text-5xl font-bold tracking-tight text-white-soft transition hover:text-accent">
           Josh Monreal
         </a>
         <p class="mt-3 text-xl font-medium text-slate-light">{site.hero.role}</p>
@@ -31,7 +31,7 @@ import { Image } from 'astro:assets';
           {
             navLinks.map((link) => (
               <li>
-                <a href={link.href} class="nav-link" data-section-link>
+                <a href={`${import.meta.env.BASE_URL}${link.href}`} class="nav-link" data-section-link>
                   <span>{link.label}</span>
                 </a>
               </li>
