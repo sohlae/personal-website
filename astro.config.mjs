@@ -6,4 +6,6 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
+  site: 'https://sohlae.github.io',
+  base: 'personal-website',
 });

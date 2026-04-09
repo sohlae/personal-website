@@ -13,22 +13,17 @@ Content and copy (meta tags, hero, about, projects, links) live mainly in [`src/
 
 ## Prerequisites
 
-- **Node.js** **22.12 or later** 
+- **Node.js** **22.12 or later**
 
 ## Install
 
-1. Clone the repository and open the project folder:
-
-   ```bash
-   git clone <repository-url>
-   cd josh-portfolio
-   ```
+1. Clone the repository and open the project folder
 
 2. Install dependencies:
 
-   ```bash
+```bash
    npm install
-   ```
+```
 
 ## Run locally
 
@@ -48,6 +43,10 @@ Open the URL Astro prints (usually `http://localhost:4321`).
 | `npm run build` | Production build to `dist/` |
 | `npm run preview` | Serve the production build locally (run after `build`) |
 | `npm run check` | Run `astro check` for Astro/TS diagnostics |
+
+## Deploy to GitHub Pages
+
+Push to `main` — the workflow at [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) builds and deploys automatically on every push.
 
 ## Customizing content
 
