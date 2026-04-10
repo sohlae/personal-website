@@ -30,7 +30,7 @@ function hasText(p: AboutParagraph): p is { text: string; link?: { text: string;
 >
   <h2 id="about-heading" class="section-heading">About</h2>
   <div class="mt-8 grid items-start gap-10">
-    <div class="max-w-prose space-y-4 body-copy">
+    <div class="space-y-8 body-copy">
       {site.about.paragraphs.map((p) => (
         isStringParagraph(p) ? (
           <p>{p}</p>
