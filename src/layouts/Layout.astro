@@ -45,7 +45,7 @@ const canonical = new URL(Astro.url.pathname, site.url).href;
     <script is:inline>
       (function () {
         const links = Array.from(document.querySelectorAll('[data-section-link]'));
-        const sections = ['about', 'experience', 'projects']
+        const sections = ['about', 'featured-projects']
           .map((id) => document.getElementById(id))
           .filter(Boolean);
 

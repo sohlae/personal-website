@@ -39,76 +39,6 @@ export const site = {
       },
     ],
   },
-experience: [
-  {
-    period: '08.2024 - Present',
-    title: 'Software Architect / DevOps Engineer',
-    company: 'Avanade',
-    summary:
-      'Leading architecture design and DevOps practices for enterprise integration solutions on Azure.',
-    highlights: [
-      'Led Oracle Service Bus migration to Azure Kubernetes Services (AKS) using .NET and Dapr',
-      'Defined and implemented API-led integration architecture with cross-cutting concerns',
-      'Designed scalable, secure architectures aligned with enterprise standards',
-      'Built CI/CD pipelines with automated testing and deployment using Azure DevOps',
-    ],
-    tech: ['.NET 8', 'C#', 'Dapr', 'Microsoft Azure', 'Azure DevOps', 'AKS'],
-  },
-  {
-    period: '04.2023 - 07.2024',
-    title: 'Software Architect',
-    company: 'Avanade',
-    summary:
-      'Transitioned into architecture role, leading system design and DevOps adoption for customer-facing platforms.',
-    highlights: [
-      'Architected and delivered PostVenta Portal for device rental and support workflows',
-      'Defined non-functional requirements including security, scalability, and performance',
-      'Implemented CI/CD pipelines, branching strategies, and automated testing',
-      'Collaborated with teams to align technical solutions with business goals',
-    ],
-    tech: ['.NET 6', 'C#', 'Angular', 'Microsoft Azure', 'Azure DevOps'],
-  },
-  {
-    period: '06.2019 - 03.2023',
-    title: 'Senior .NET Developer',
-    company: 'DXC Technology / Avanade',
-    summary:
-      'Developed enterprise applications and APIs across multiple projects, focusing on backend services and integrations.',
-    highlights: [
-      'Built and maintained REST APIs using .NET Core and ASP.NET',
-      'Worked on projects such as SDSD2, FPS, and Pain Alert',
-      'Integrated systems using Azure services and messaging patterns',
-      'Improved performance and maintainability of existing enterprise systems',
-    ],
-    tech: ['.NET Core', 'C#', 'Azure', 'SQL Server', 'REST APIs'],
-  },
-  {
-    period: '07.2016 - 05.2019',
-    title: '.NET Developer',
-    company: 'DXC Technology (formerly HP Enterprise Services)',
-    summary:
-      'Started career developing full-stack enterprise applications with AngularJS and .NET Framework.',
-    highlights: [
-      'Developed applications such as Resource Tracking System, Workflow Document Processor, and VIP System',
-      'Built full-stack solutions using AngularJS and ASP.NET MVC/Web Forms',
-      'Worked with SQL Server and Entity Framework for data-driven applications',
-      'Gained experience in enterprise environments and legacy system modernization',
-    ],
-    tech: ['.NET Framework', 'C#', 'AngularJS', 'SQL Server', 'Entity Framework'],
-  },
-  {
-    period: '03.2016 - 06.2016',
-    title: 'VBA Developer',
-    company: 'DXC Technology (HP)',
-    summary:
-      'Worked on early-stage internal tooling and automation solutions.',
-    highlights: [
-      'Developed Asia Galleria project using VBA',
-      'Automated internal processes and reporting workflows',
-    ],
-    tech: ['VBA'],
-  },
-],
   techStack: [
     {
       category: 'Technology Stack',
@@ -246,10 +176,8 @@ experience: [
     line: 'Open to collaborations, architecture consulting, and technical leadership roles.',
     email: 'josh.monreal@outlook.com',
     linkedin: 'https://www.linkedin.com/in/joshmonreal',
-    github: 'https://github.com/sohlae',
   },
 } as const;
 
 export type FeaturedProject = (typeof site.featuredProjects)[number];
 export type ProjectArchiveRow = (typeof site.projectArchive)[number];
-export type ExperienceRow = (typeof site.experience)[number];

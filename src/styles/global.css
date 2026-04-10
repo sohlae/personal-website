@@ -51,29 +51,15 @@
   }
 
   .subtle-link {
-    @apply text-slate transition-colors duration-200 hover:text-accent focus-visible:text-accent;
+    @apply text-slate transition-colors duration-200 hover:text-slate-lightest focus-visible:text-accent;
   }
 
   .nav-link {
     @apply inline-flex items-center gap-3 font-mono text-xs uppercase tracking-widest text-slate transition-all duration-200 hover:text-slate-lightest focus-visible:text-slate-lightest;
   }
 
-  .nav-link::before {
-    content: '';
-    @apply h-px w-8 bg-slate/60 transition-all duration-200;
-  }
-
-  .nav-link:hover::before,
-  .nav-link:focus-visible::before {
-    @apply w-16 bg-slate-lightest;
-  }
-
   .nav-link-active {
-    @apply text-slate-lightest;
-  }
-
-  .nav-link-active::before {
-    @apply w-16 bg-accent;
+    @apply text-accent;
   }
 
   .section-heading {

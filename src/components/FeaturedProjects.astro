@@ -4,11 +4,11 @@ import ProjectCard from './ProjectCard.astro';
 ---
 
 <section
-  id="projects"
+  id="featured-projects"
   class="mb-20 scroll-mt-24 lg:mb-28 lg:scroll-mt-8"
   aria-labelledby="projects-heading"
 >
-  <h2 id="projects-heading" class="section-heading">Projects</h2>
+  <h2 id="projects-heading" class="section-heading">Featured Projects</h2>
   <div class="space-y-20">
     {site.featuredProjects.map((project) => (
       <ProjectCard project={project} />
