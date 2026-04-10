@@ -10,6 +10,7 @@ export const site = {
     name: 'Josh Monreal',
     role: '.NET Developer & Software Architect',
     tagline: 'From architecture to code — Building scalable, high-quality software that lasts.',
+    contact: 'Open to collaborations, architecture consulting, and technical leadership roles.',
   },
   about: {
     paragraphs: [
