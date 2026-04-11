@@ -17,7 +17,7 @@ export const site = {
       {
         text: "I'm a .NET Developer and software architect with over 10 years of experience building scalable, high-quality applications. My career began in the services department of HP (now ",
         link: { text: 'DXC Technology', href: 'https://dxc.com' },
-        textAfter: ", where I worked on a web application powered by AngularJS on the front end and the .NET Framework on the back end. Since then, I've worked with clients across diverse industries, gaining broad technical expertise and a deep appreciation for clean, pragmatic code.",
+        textAfter: "), where I worked on a web application powered by AngularJS on the front end and the .NET Framework on the back end. Since then, I've worked with clients across diverse industries, gaining broad technical expertise and a deep appreciation for clean, pragmatic code.",
       },
       "I truly believe that software must be reliable, secure, and maintainable. It must be ensured that every solution meets the highest standards. That's why I emphasize best practices such as designing the best architectural solution for the application, writing clean code and automated tests, and implementing DevOps practices.",
       {

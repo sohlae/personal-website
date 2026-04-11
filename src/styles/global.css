@@ -9,11 +9,11 @@
   --color-navy-light: #1f3a40;
   --color-navy-lighter: #182e33;
 
-  --color-slate: #b8d4d8;
-  --color-slate-light: #d6e8eb;
-  --color-slate-lightest: #f2fbfc;
+  --color-slate: #ffffff;
+  --color-slate-light: #ffffff;
+  --color-slate-lightest: #ffffff;
 
-  --color-white-soft: #e6f4f6;
+  --color-white-soft: #ffffff;
 
   --color-accent: #5fffe0;
   --color-accent-bright: #9bffea;
@@ -69,7 +69,7 @@
 
 @layer components {
   .skip-link {
-    @apply sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-100 focus:rounded-sm focus:border focus:border-accent-bright focus:bg-accent focus:px-4 focus:py-2 focus:text-white focus:outline-hidden focus:ring-2 focus:ring-accent-bright;
+    @apply sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-100 focus:rounded-sm focus:border focus:px-4 focus:py-2 focus:outline-hidden focus:ring-2 focus:ring-accent-bright;
   }
 
   .body-copy {
@@ -77,11 +77,11 @@
   }
 
   .subtle-link {
-    @apply text-slate transition-colors duration-200 hover:text-slate-lightest focus-visible:text-accent;
+    @apply text-accent transition-colors duration-200;
   }
 
   .nav-link {
-    @apply inline-flex items-center gap-3 font-mono text-xs uppercase tracking-widest text-slate transition-all duration-200 hover:text-slate-lightest focus-visible:text-slate-lightest;
+    @apply inline-flex items-center gap-3 text-xs uppercase tracking-widest text-slate transition-all duration-200;
   }
 
   .nav-link-active {
@@ -89,7 +89,7 @@
   }
 
   .section-heading {
-    @apply mb-8 font-mono text-base font-semibold tracking-tight text-slate-lightest lg:hidden;
+    @apply mb-8 text-base font-bold uppercase tracking-tight text-slate-lightest lg:hidden;
   }
 
   .panel-card {

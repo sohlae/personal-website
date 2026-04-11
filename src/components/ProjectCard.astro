@@ -62,29 +62,29 @@ const projectWithCategories = project as ProjectWithTechCategories;
 
     {project.solution && (
       <div>
-        <dt class="font-mono text-xs uppercase tracking-wider text-accent">Solution</dt>
+        <dt class="text-xs uppercase tracking-wider text-accent">Solution</dt>
         <dd class="mt-1.5 text-slate">{project.solution}</dd>
       </div>
     )}
     {project.impact && (
       <div>
-        <dt class="font-mono text-xs uppercase tracking-wider text-accent">Impact</dt>
+        <dt class="text-xs uppercase tracking-wider text-accent">Impact</dt>
         <dd class="mt-1.5 text-slate">{project.impact}</dd>
       </div>
     )}
   </div>
 
   <div>
-    <dt class="font-mono text-xs uppercase tracking-wider text-accent mb-3">Technologies / Tools</dt>
+    <dt class="text-xs uppercase tracking-wider text-accent mb-3">Technologies / Tools</dt>
     <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
       {projectWithCategories.techCategories.map((techCat) => (
         <div>
-          <h4 class="font-mono text-xs uppercase tracking-wider text-slate-lightest mb-2">
+          <h4 class="text-xs uppercase tracking-wider text-slate-lightest mb-2">
             {techCat.category}
           </h4>
           <ul class="space-y-1">
             {techCat.items.map((item) => (
-              <li class="font-mono text-sm text-slate-light">
+              <li class="text-sm text-slate-light">
                 {item}
               </li>
             ))}

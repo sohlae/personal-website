@@ -38,27 +38,29 @@ function hasText(p: AboutParagraph): p is { text: string; link?: { text: string;
           <>
             {hasText(p) && (
               <p>
-                {p.text}
-                {p.link && (
-                  <a href={p.link.href} class="subtle-link underline" target="_blank" rel="noreferrer">
-                    {p.link.text}
-                  </a>
+                {p.text}{p.link && (
+                  <a href={p.link.href} class="subtle-link text-accent" target="_blank" rel="noreferrer">{p.link.text}</a>
+                )}{p.textAfter}
+              </p>
+            )}
+            {p.heading && (
+              <div class="space-y-2">
+                <p class="font-semibold text-white-soft">{p.heading}</p>
+
+                {hasBullets(p) && (
+                  <ul class="list-disc pl-5 space-y-1">
+                    {p.bullets.map((bullet) => (
+                      <li>{bullet}</li>
+                    ))}
+                  </ul>
                 )}
-                {p.textAfter}
-              </p>
-            )}
-            {p.heading && <p class="font-semibold text-white-soft">{p.heading}</p>}
-            {hasBullets(p) && (
-              <ul class="list-disc pl-5 space-y-1">
-                {p.bullets.map((bullet) => (
-                  <li>{bullet}</li>
-                ))}
-              </ul>
-            )}
-            {hasTechItems(p) && (
-              <p class="font-mono text-sm text-accent">
-                {p.techItems.join(', ')}
-              </p>
+
+                {hasTechItems(p) && (
+                  <p class="font-mono text-sm text-accent">
+                    {p.techItems.join(', ')}
+                  </p>
+                )}
+              </div>
             )}
           </>
         )
