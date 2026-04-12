@@ -7,5 +7,5 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   site: 'https://sohlae.github.io',
-  base: 'personal-website',
+  base: process.env.AZURE_DEPLOY ? '/' : 'personal-website',
 });
