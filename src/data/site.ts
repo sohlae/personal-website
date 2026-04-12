@@ -152,19 +152,19 @@ export const site = {
       date: '04.2018 – 07.2018',
       project: 'Training Management System',
       role: 'Full-stack .NET Developer',
-      techStack: 'C#, .NET Framework, SQL Server, Entity Framework, AngularJS, HTML',
+      techStack: 'C#, .NET Framework, SQL Server, Entity Framework, HTML',
     },
     {
       date: '11.2017 – 03.2018',
       project: 'ODS (v2.x)',
       role: '.NET Developer',
-      techStack: 'C#, .NET Framework, SQL Server, Entity Framework, AngularJS, HTML',
+      techStack: 'C#, .NET Framework, SQL Server, Entity Framework, HTML',
     },
     {
       date: '07.2016 – 10.2017',
       project: 'Consumer Research Center',
       role: 'Full-stack .NET Developer',
-      techStack: 'C#, .NET Framework, SQL Server, Entity Framework, AngularJS, HTML',
+      techStack: 'C#, .NET Framework, SQL Server, Entity Framework, HTML',
     },
     {
       date: '03.2016 – 11.2016',

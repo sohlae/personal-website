@@ -50,10 +50,10 @@ const description =
               <th scope="col" class="px-4 py-4 text-xs font-medium uppercase tracking-[0.25em] text-slate-lightest">
                 Project
               </th>
-              <th scope="col" class="hidden px-4 py-4 text-xs font-medium uppercase tracking-[0.25em] text-slate-lightest md:table-cell">
+              <th scope="col" class="px-4 py-4 text-xs font-medium uppercase tracking-[0.25em] text-slate-lightest">
                 Role
               </th>
-              <th scope="col" class="hidden px-4 py-4 text-xs font-medium uppercase tracking-[0.25em] text-slate-lightest lg:table-cell">
+              <th scope="col" class="px-4 py-4 text-xs font-medium uppercase tracking-[0.25em] text-slate-lightest">
                 Tech stack
               </th>
             </tr>
@@ -64,8 +64,8 @@ const description =
                 <tr>
                   <td class="whitespace-nowrap px-4 py-4 font-mono text-slate-light">{row.date}</td>
                   <td class="px-4 py-4 text-slate-lightest">{row.project}</td>
-                  <td class="hidden px-4 py-4 text-slate md:table-cell">{row.role}</td>
-                  <td class="hidden px-4 py-4 text-accent lg:table-cell">{row.techStack}</td>
+                  <td class="px-4 py-4 text-slate">{row.role}</td>
+                  <td class="px-4 py-4 text-accent">{row.techStack}</td>
                 </tr>
               ))
             }
