@@ -1,25 +1,12 @@
 ---
 import { navLinks } from '../data/nav';
 import { site } from '../data/site';
-import profile from '../assets/josh.png';
-import { Image } from 'astro:assets';
 import ContactBar from './ContactBar.astro';
 ---
 
 <aside class="relative hidden shrink-0 lg:block lg:w-[42%]">
-  <div class="sticky top-0 flex h-screen max-h-screen flex-col justify-between overflow-y-auto py-10 pr-12">
+  <div class="sticky top-0 flex h-screen max-h-screen flex-col justify-between overflow-y-auto pt-22 pr-12">
     <div class="space-y-12">
-      <div class="mb-6 mt-8 w-full max-w-68 bg-black rounded-sm">
-        <Image
-          src={profile}
-          alt="Josh Monreal profile portrait"
-          width={180}
-          height={180}
-          class="aspect-square w-full object-cover mask-[radial-gradient(circle,black_95%,transparent_100%)]"
-          loading="eager"
-        />
-      </div>
-
       <div>
         <a href={import.meta.env.BASE_URL} class="text-5xl font-bold tracking-tight text-white-soft transition">
           Josh Monreal
