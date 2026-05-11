@@ -175,7 +175,7 @@ export const site = {
   ],
   contact: {
     line: 'Open to collaborations, architecture consulting, and technical leadership roles.',
-    email: 'mailto:josh.monreal@nelmora.io',
+    email: 'josh.monreal@nelmora.io',
     linkedin: 'https://www.linkedin.com/in/joshmonreal',
   },
 } as const;
